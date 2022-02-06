@@ -3,8 +3,7 @@ export const msalConfig = {
     auth: {
         clientId: "51f3e8a5-d941-4369-9b35-9c376befb826",
         authority: "https://login.microsoftonline.com/24d2eec2-c04e-4c44-830d-f374a7b9559e", // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
-        redirectUri: `${window.location.origin}`,
-        postLogoutRedirectUri: `${window.location.origin}` //Donot 
+        redirectUri: window.location.href
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored

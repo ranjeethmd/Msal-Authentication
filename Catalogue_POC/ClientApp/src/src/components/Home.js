@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAccessToken, signIn, signOut } from '../authentication';
+import { getAccessToken } from '../authentication';
 
 
 export const Home = () => {
@@ -34,9 +34,6 @@ export const Home = () => {
     else {
 
         return (
-            <>
-                <button onClick={() => signIn()}>Sign In</button>
-                
             <div className="table-responsive">
                 <table className="table image-rendition-feature  sorting" disprows="5">
                     <thead>
@@ -68,8 +65,7 @@ export const Home = () => {
                         }
                     </tbody>
                 </table>
-                </div>
-                </>
+            </div>
         );
     }
 }

@@ -48,19 +48,3 @@ export const  getAccessToken = async () => {
         return response.accessToken
     }
 }
-
-
-export const signIn = async (state) => {
-
-    instance.loginRedirect({ state: state })
-}
-
-export const signOut = async () => {
-
-    const logoutRequest = {
-        account: instance.getActiveAccount(),
-        postLogoutRedirectUri: msalConfig.postLogoutRedirectUri
-    }
-
-    instance.logoutRedirect(logoutRequest);
-}
